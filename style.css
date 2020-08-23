@@ -1,0 +1,65 @@
+@font-face {
+	font-family: GoogleSans;
+	src: url(fonts/GoogleSans-Regular.ttf);
+}
+
+body {
+    background: #ffffff;
+    color: #000000;
+    font-family: GoogleSans;
+    font-size: 16px;
+}
+ 
+#container {
+    background: #ffffff;
+    margin: auto;
+    width: 1000px;
+    height: auto;
+}
+ 
+#header {
+    background: #ffffff;
+    height: 60px;
+    width: 1000px;
+    font-size: 36px;
+    text-align: center;
+}
+ 
+
+#content {
+    background: #ffffff;
+    width: 1000px;
+    height: auto;
+}
+
+li {
+    margin-left: 20px;
+}
+
+.question {
+    background: #e1e1e1;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 20px;
+}
+
+.answer {
+    background: #cccccc;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.spoiler input, .spoiler div  { 
+    display: none; /* Скрываем содержимое */
+}
+.spoiler label::before {
+    content: '(+)'; /* Текст перед заголовком */
+    margin-right: 5px; /* Расстояние до текста */
+}
+/* Открытый спойлер */
+.spoiler :checked + label::before { content: '(-)'; }
+.spoiler :checked ~ div {
+    display: block; /* Показываем спойлер */
+    padding: 10px; /* Поля вокруг текста */
+}
